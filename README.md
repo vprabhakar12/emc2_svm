@@ -7,7 +7,6 @@ This project is the current progress of the research at EMC2 lab at Illinois Ins
 ### Binary SVM Solver
 - **Soft Margin Formulation**: Includes slack variables and hinge loss.
 - **Dual Formulation**: Optimized using coordinate descent with analytical updates.
-- **GPU Readiness**: Violation-based updates lend themselves to CUDA parallelism.
 
 ### Multiclass SVM Solvers
 1. **Crammer-Singer SVM**: Optimizes a single loss over all classes with one slack per sample.
@@ -18,9 +17,9 @@ This project is the current progress of the research at EMC2 lab at Illinois Ins
 
 - **Gradient & Violation Based Updates**: Per-sample gradient computation and violation-based sample filtering.
 - **Simplex Projection**: Each dual subproblem is solved using either:
-  - **Sort-based O(k log k) projection** Implemented currently using the simplex projection.
-  - **Expected O(k) pivot projection** 
-  - **Fixed-point bisection (for large k or hardware-specific optimization)**
+  - Sort-based O(k log k) projection - Implemented currently using the simplex projection.
+  - Expected O(k) pivot projection*
+  - Fixed-point bisection (for large k or hardware-specific optimization)
 
 ## Credits 🙌
 Guided by Professor [Yutong Wang](https://yutongwang.me/) at Illinois Insitute of Technology
